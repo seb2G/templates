@@ -1,0 +1,24 @@
+Export the files as a single jar http://www.javaprogrammingforums.com/java-ides/33721-eclipse-wont-save-source-folders-jar.html
+
+1. Select the project and right click on it to select Export > General > Archive File 
+- Select folders/packages you want and other misc stuff
+- Unselect the folder target
+- Select the file location
+- Make sure the following settings are selected: Save in zip format, Compress the contents of the file, Create diretory structure for files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Import files from a single jar
+
+1. Import file by selecting: File > Import > Existing Projects into Workspace > Select archive file > Press enter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compile the file into a jar file
+
+1. Create a maven event by selecting: Debug Configurations > right click on Maven Build > new
+- Enter ${project_loc:javaAppMvn} in base directory
+- Enter clean install in Goals
+2. Run the created maven event
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Execute the jar file
+
+1. Copy the compiled jar file  into some location
+2. Navigate to the location using CMD
+3. execure the following java -jar jarName.jar
